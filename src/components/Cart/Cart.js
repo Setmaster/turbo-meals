@@ -9,7 +9,9 @@ const Cart = (props) => {
 
     const cartItemRemoveHandler = id => {};
 
-    const cartItemAddHandler = item => {};
+    const cartItemAddHandler = item => {
+        cartCtx.addItem({...item, amount: 1}); // copy item obj and add amount to it
+    };
 
     /* use bind to preconfigure the values that will be passed to the functions */
     const cartItems = <ul className={classes['cart-items']}>
